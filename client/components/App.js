@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, Switch} from 'react-router-dom'
 import LandingPage from './LandingPage'
 import PageHeader from './PageHeader';
+import PageFooter from './PageFooter';
 
 function App() {
     return (
@@ -13,6 +14,8 @@ function App() {
                     <LandingPage/>
                 </Route>
             </Switch>
+
+            <PageFooter/>
         </Router>
     )
 }

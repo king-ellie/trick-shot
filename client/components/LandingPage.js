@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { HashRouter as Router, Route, Link, Switch} from 'react-router-dom'
+import React from 'react';
 
 function LandingPage() {
     return (
@@ -16,7 +15,6 @@ function LandingPage() {
                 </video>
             </div>
 
-            <h4>See this video on other platforms:</h4>
         </div>
     )
 }
