@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
-import { HashRouter as Router, Route, Link, Switch} from 'react-router-dom'
+import React from 'react';
+import { HashRouter as Router, Route, Switch} from 'react-router-dom'
 import LandingPage from './LandingPage'
 
 function App() {
-
     return (
-        <div>
-            <LandingPage></LandingPage>
-        </div>
+        <Router>
+            <Switch>
+                <Route exact path='/'>
+                    <LandingPage></LandingPage>
+                </Route>
+            </Switch>
+        </Router>
     )
 }
 
