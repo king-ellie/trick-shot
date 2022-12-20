@@ -4,8 +4,6 @@ import { HashRouter as Router, Route, Link, Switch} from 'react-router-dom'
 function LandingPage() {
     return (
         <div>
-            <h1>Trick Shot</h1>
-
             <video
                 width="1020"
                 height="630"
