@@ -1,3 +1,21 @@
+body {
+    background-color: lavender;
+    font-family: "Comic Sans MS", "Comic Sans";
+}
+
 h1 {
-    background-color: gainsboro;
+    animation: header-color-change 1.5s infinite;
+    font-size: 5em;
+    text-align: center
+}
+@keyframes header-color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+  }
+
+.landing-page-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
