@@ -10,6 +10,7 @@ function VideoAngle(props) {
           type="video/mov"
           src="../../public/trick_shot.MOV"
           autoPlay
+          loop
           className={angle.className}
       >
           Your browser does not support the video tag.

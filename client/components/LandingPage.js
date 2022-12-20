@@ -10,6 +10,7 @@ function LandingPage() {
                     type="video/mov"
                     src="../../public/trick_shot.MOV"
                     autoPlay
+                    loop
                 >
                     Your browser does not support the video tag.
                 </video>
