@@ -4,7 +4,9 @@ import { HashRouter as Router, Route, Link, Switch} from 'react-router-dom'
 function PageHeader() {
     return (
         <div>
-            <h1>Trick Shot</h1>
+            <Link to="/" style={{textDecoration: "none"}}>
+              <h1>Trick Shot</h1>
+            </Link>
 
             <p>
               <Link to="/different-angles/">
