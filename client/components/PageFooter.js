@@ -6,7 +6,7 @@ function PageFooter() {
     }
 
     return (
-        <div>
+        <div className="page-footer">
             <h4>See this trick shot on other platforms:</h4>
 
             <button onClick={sendUserToInstagram}>Instagram</button>

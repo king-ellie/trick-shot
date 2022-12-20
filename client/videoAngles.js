@@ -1,7 +1,15 @@
 const videoAngles = [
   {
-    "title": "From Behind",
-    "className": "heyo"
+    "className": "angle-1"
+  },
+  {
+    "className": "angle-2"
+  },
+  {
+    "className": "angle-3"
+  },
+  {
+    "className": "angle-4"
   }
 ]
 

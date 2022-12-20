@@ -3,7 +3,7 @@ import React from 'react';
 function LandingPage() {
     return (
         <div>
-            <div className="landing-page-video">
+            <div className="center-video">
                 <video
                     width="1020"
                     height="630"
