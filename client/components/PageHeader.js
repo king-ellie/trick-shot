@@ -5,6 +5,12 @@ function PageHeader() {
     return (
         <div>
             <h1>Trick Shot</h1>
+
+            <p>
+              <Link to="/different-angles/">
+                Click here to see trick shot from different angles
+              </Link>
+            </p>
         </div>
     )
 }
