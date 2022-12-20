@@ -4,6 +4,7 @@ import LandingPage from './LandingPage'
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
 import DifferentAnglesPage from './DifferentAnglesPage';
+import PartyMode from './PartyMode';
 
 function App() {
     return (
@@ -17,6 +18,10 @@ function App() {
 
                 <Route exact path='/different-angles'>
                     <DifferentAnglesPage/>
+                </Route>
+
+                <Route exact path='/party-mode'>
+                    <PartyMode/>
                 </Route>
             </Switch>
 

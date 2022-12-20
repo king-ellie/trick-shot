@@ -13,6 +13,12 @@ function PageHeader() {
                 Click here to see trick shot from different angles
               </Link>
             </p>
+
+            <p>
+              <Link to="/party-mode/">
+                Click here to enter party mode
+              </Link>
+            </p>
         </div>
     )
 }
