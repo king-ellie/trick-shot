@@ -5,6 +5,8 @@ import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
 import DifferentAnglesPage from './DifferentAnglesPage';
 import PartyMode from './PartyMode';
+import Confetti from 'react-confetti'
+
 
 function App() {
     return (
@@ -21,6 +23,8 @@ function App() {
                 </Route>
 
                 <Route exact path='/party-mode'>
+                    <Confetti />
+
                     <PartyMode/>
                 </Route>
             </Switch>
