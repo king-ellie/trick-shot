@@ -5,7 +5,7 @@ function PageHeader() {
     return (
         <div>
             <Link to="/" style={{textDecoration: "none"}}>
-              <h1>Trick Shot</h1>
+              <h1>❤️ Trick Shots For Girls Only ❤️</h1>
             </Link>
 
             <p>
