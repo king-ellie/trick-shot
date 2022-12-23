@@ -43,6 +43,10 @@ h1 {
       }
 }
 
+.party-mode {
+    height: 80vh;
+}
+
 .page-footer{
     display: flex;
     flex-direction: column;
