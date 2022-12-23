@@ -1,29 +1,39 @@
 import React, { useState } from 'react';
+import partyModeStyles from '../videoStyles/partyModeStyles';
 
 function PartyMode() {
-  const [ clickCoordinates, setClickCoordinates ] = useState([])
+  const [ partyModeVideos, setPartyModeVideos ] = useState([])
 
-  const captureClickCoordinates = (event) => {
-    console.log(`${event.nativeEvent}`)
-    setClickCoordinates([...clickCoordinates, {
+  const capturePartyModeVideo = (event) => {
+    setPartyModeVideos([...partyModeVideos, {
       x: event.nativeEvent.clientX,
-      y: event.nativeEvent.clientY
+      y: event.nativeEvent.clientY,
+      className: choosePartyModeStyle()
     }])
+
   }
+
+  function choosePartyModeStyle() {
+    const indexOfPartyModeStyles = Math.floor(partyModeStyles.length * Math.random())
+    const style = partyModeStyles[indexOfPartyModeStyles];
+    return style.className;
+}
 
 
   return (
-    <div onClick={captureClickCoordinates} className="party-mode">
+    <div onClick={capturePartyModeVideo} className="party-mode-wrapper">
       <h2>Click anywhere below to party. The more you click, the more you party</h2>
 
-      { clickCoordinates.map((clickCoordinates) =>
+      { partyModeVideos.map((partyModeVideos, idx) =>
         <video
+            key={idx}
             height="630"
             type="video/mov"
             src="../../public/trick_shot.MOV"
             autoPlay
             loop
-            style={{position: "absolute", left: clickCoordinates.x, top: clickCoordinates.y}}
+            style={{position: "absolute", left: partyModeVideos.x, top: partyModeVideos.y}}
+            className={partyModeVideos.className}
         >
             Your browser does not support the video tag.
         </video>

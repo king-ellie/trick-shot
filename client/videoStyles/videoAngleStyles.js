@@ -1,4 +1,4 @@
-const videoAngles = [
+const videoAngleStyles = [
   {
     "className": "angle-1"
   },
@@ -7,10 +7,7 @@ const videoAngles = [
   },
   {
     "className": "angle-3"
-  },
-  {
-    "className": "angle-4"
   }
 ]
 
-export default videoAngles
+export default videoAngleStyles
