@@ -4,7 +4,7 @@ import LandingPage from './LandingPage'
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
 import DifferentAnglesPage from './DifferentAnglesPage';
-import PartyMode from './PartyMode';
+import PartyModePage from './PartyModePage';
 import Confetti from 'react-confetti'
 
 
@@ -25,7 +25,7 @@ function App() {
                 <Route exact path='/party-mode'>
                     <Confetti />
 
-                    <PartyMode/>
+                    <PartyModePage/>
                 </Route>
             </Switch>
 

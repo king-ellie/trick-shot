@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import partyModeStyles from '../videoStyles/partyModeStyles';
 
-function PartyMode() {
+function PartyModePage() {
   const [ partyModeVideos, setPartyModeVideos ] = useState([])
 
   const capturePartyModeVideo = (event) => {
@@ -44,4 +44,4 @@ function PartyMode() {
 }
 
 
-export default PartyMode
+export default PartyModePage
