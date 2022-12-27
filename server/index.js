@@ -8,7 +8,7 @@ app.use('/public', static(path.join(__dirname, '../public')));
 app.use(express.json())
 
 app.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../client/index.html'))
+    res.sendFile(path.join(__dirname, '../index.html'))
 })
 
 const init = async() => {
