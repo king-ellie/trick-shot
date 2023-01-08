@@ -7,6 +7,7 @@
   "scripts": {
     "seed": "node seed/seed.js",
     "start:backend": "nodemon server/index --ignore public/",
+    "start:frontend-production": "webpack",
     "start:frontend": "webpack -w",
     "predeploy": "npm run start:frontend",
     "deploy": "gh-pages -d public"
