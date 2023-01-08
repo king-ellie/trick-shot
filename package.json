@@ -1,12 +1,15 @@
 {
   "name": "NERP-stack-boilerplate",
+  "homepage": "https://king-ellie.github.io/trick-shot/",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "seed": "node seed/seed.js",
     "start:backend": "nodemon server/index --ignore public/",
-    "start:frontend": "webpack -w"
+    "start:frontend": "webpack -w",
+    "predeploy": "npm run start:frontend",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +30,7 @@
     "@babel/core": "^7.13.16",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
+    "gh-pages": "^4.0.0",
     "nodemon": "^2.0.20",
     "webpack": "^5.35.1",
     "webpack-cli": "^4.6.0"
