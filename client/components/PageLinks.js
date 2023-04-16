@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-function PageHeader() {
+function PageLinks() {
     return (
         <div>
             <p>
@@ -19,4 +19,4 @@ function PageHeader() {
     )
 }
 
-export default PageHeader
+export default PageLinks
