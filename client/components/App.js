@@ -6,13 +6,14 @@ import PageFooter from './PageFooter';
 import DifferentAnglesPage from './DifferentAnglesPage';
 import PartyModePage from './PartyModePage';
 import Confetti from 'react-confetti'
+import ImmersiveModePage from './ImmersiveMode';
 
 
 function App() {
     return (
         <Router>
             <Link to="/" style={{textDecoration: "none"}}>
-              <h1>❤️ Trick Shots For Girls Only ❤️</h1>
+              <h1 style={{"margin-block-end": 0}}>❤️ Trick Shots For Girls Only ❤️</h1>
             </Link>
 
 
@@ -35,6 +36,10 @@ function App() {
                     <PageLinks/>
 
                     <PartyModePage/>
+                </Route>
+
+                <Route exact path='/immersive-mode'>
+                    <ImmersiveModePage/>
                 </Route>
             </Switch>
 

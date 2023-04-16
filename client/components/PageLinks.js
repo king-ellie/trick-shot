@@ -15,6 +15,12 @@ function PageLinks() {
                 Click here to enter party mode
               </Link>
             </p>
+
+            <p>
+              <Link to="/immersive-mode/">
+                Click here to enter immersive mode
+              </Link>
+            </p>
         </div>
     )
 }
