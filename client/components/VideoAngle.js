@@ -8,7 +8,7 @@ function VideoAngle(props) {
       <video
           height="630"
           type="video/mov"
-          src="../../public/trick_shot.MOV"
+          src="./trick_shot.MOV"
           autoPlay
           loop
           className={angle.className}

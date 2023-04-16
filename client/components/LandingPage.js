@@ -8,7 +8,7 @@ function LandingPage() {
                     width="1020"
                     height="630"
                     type="video/mov"
-                    src="../../public/trick_shot.MOV"
+                    src="./trick_shot.MOV"
                     autoPlay
                     loop
                     muted
