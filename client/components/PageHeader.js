@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom'
 function PageHeader() {
     return (
         <div>
-            <Link to="/" style={{textDecoration: "none"}}>
-              <h1>❤️ Trick Shots For Girls Only ❤️</h1>
-            </Link>
-
             <p>
               <Link to="/different-angles/">
                 Click here to see trick shot from different angles

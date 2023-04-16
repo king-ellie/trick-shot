@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch} from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import LandingPage from './LandingPage'
 import PageHeader from './PageHeader';
 import PageFooter from './PageFooter';
@@ -11,6 +11,10 @@ import Confetti from 'react-confetti'
 function App() {
     return (
         <Router>
+            <Link to="/" style={{textDecoration: "none"}}>
+              <h1>❤️ Trick Shots For Girls Only ❤️</h1>
+            </Link>
+
             <PageHeader/>
 
             <Switch>
