@@ -9,7 +9,7 @@ function ImmersiveModePage() {
           height="100%"
           width="100%"
           type="video/mov"
-          src="../../public/trick_shot.MOV"
+          src="./trick_shot.MOV"
           autoPlay
           loop
       >
