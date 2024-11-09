@@ -29,7 +29,7 @@ function PartyModePage() {
             key={idx}
             height="630"
             type="video/mov"
-            src="../../public/trick_shot.MOV"
+            src="./trick_shot.MOV"
             autoPlay
             loop
             style={{position: "absolute", left: partyModeVideos.x, top: partyModeVideos.y}}
