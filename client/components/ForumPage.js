@@ -3,11 +3,21 @@ import React, { useState } from 'react';
 function ForumPage() {
   const [displayName, setDisplayName] = useState('');
   const [comment, setComment] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Display Name:', displayName);
     console.log('Comment:', comment);
+
+    // Reset form fields
+    setDisplayName('');
+    setComment('');
+    setIsSubmitted(true);
+
+    setTimeout(() => {
+        setIsSubmitted(false);
+    }, 4000);
   };
 
   return (
@@ -47,6 +57,13 @@ function ForumPage() {
           <button type="submit">Post Comment</button>
         </div>
       </form>
+
+      {isSubmitted && (
+        <div className="toast" style={{ textAlign: 'center' }}>
+          <p>Thank you for your praise.</p>
+          <p>It will appear in the forum shortly.</p>
+        </div>
+      )}
     </div>
   );
 }

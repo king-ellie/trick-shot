@@ -127,7 +127,6 @@ h1 {
  }
 
  /* FORM STYLING */
- /* Ensure the labels appear above the input fields */
 .forum-form {
     display: flex;
     flex-direction: column;
@@ -148,4 +147,34 @@ input, textarea {
     width: 100%;
     box-sizing: border-box; /* Makes the input take up the full width */
 }
+  
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    animation: fadeInOut 4s ease-in-out forwards;
+  }
+  
+  /* Fade-in and fade-out animation */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   
