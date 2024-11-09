@@ -21,6 +21,12 @@ function PageLinks() {
                 Click here to enter immersive mode
               </Link>
             </p>
+
+            <p>
+              <Link to="/forum/">
+                Click here to go to the Trick Shot For Girls Only public forum
+              </Link>
+            </p>
         </div>
     )
 }

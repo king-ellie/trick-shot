@@ -125,3 +125,56 @@ h1 {
        animation-timing-function: ease-in;
     }
  }
+
+ /* FORM STYLING */
+.forum-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem; /* Add space between label and input */
+    }
+
+input, textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Makes the input take up the full width */
+}
+  
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    animation: fadeInOut 4s ease-in-out forwards;
+  }
+  
+  /* Fade-in and fade-out animation */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
