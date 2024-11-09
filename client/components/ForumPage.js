@@ -14,20 +14,10 @@ function ForumPage() {
     <div className="center-video">
       <p>Welcome to the Trick Shot For Girls Only public forum</p>
 
-      <video
-        height="100%"
-        width="100%"
-        type="video/mov"
-        src="../../public/trick_shot.MOV"
-        autoPlay
-        loop
-      >
-        Your browser does not support the video tag.
-      </video>
-
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form name="forum" onSubmit={handleSubmit} className="forum-form" netlify>
+        <div className="form-group">
           <label htmlFor="displayName">Display Name:</label>
+
           <input
             type="text"
             id="displayName"
@@ -39,8 +29,9 @@ function ForumPage() {
           />
         </div>
 
-        <div>
+        <div className="form-group">
           <label htmlFor="comment">What nice things do you have to say about the trick shot?</label>
+
           <textarea
             id="comment"
             name="comment"
@@ -53,7 +44,7 @@ function ForumPage() {
         </div>
 
         <div>
-          <button type="submit">Submit Post</button>
+          <button type="submit">Post Comment</button>
         </div>
       </form>
     </div>

@@ -125,3 +125,27 @@ h1 {
        animation-timing-function: ease-in;
     }
  }
+
+ /* FORM STYLING */
+ /* Ensure the labels appear above the input fields */
+.forum-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem; /* Add space between label and input */
+    }
+
+input, textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Makes the input take up the full width */
+}
+  
