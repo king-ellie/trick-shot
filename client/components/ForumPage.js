@@ -24,13 +24,15 @@ function ForumPage() {
     <div className="center-video">
       <p>Welcome to the Trick Shot For Girls Only public forum</p>
 
-      <form name="forum" onSubmit={handleSubmit} className="forum-form" data-netlify="true" method="POST">
+      <form name="forum" onSubmit={handleSubmit} className="forum-form" method="POST">
+        <input type="hidden" name="form-name" value="forum" />
+      
         <div className="form-group">
-          <label htmlFor="displayName">Display Name:
+          <label htmlFor="display-name">Display Name:
             <input
               type="text"
-              id="displayName"
-              name="displayName"
+              id="display-name"
+              name="display-name"
               placeholder="Enter your display name"
               value={displayName}
               onChange={(event) => setDisplayName(event.target.value)}
