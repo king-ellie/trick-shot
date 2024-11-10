@@ -14,7 +14,7 @@ function App() {
     return (
         <Router>
             <Link to="/" style={{textDecoration: "none"}}>
-              <h1 style={{"margin-block-end": 0}}>❤️ Trick Shots For Girls Only ❤️</h1>
+              <h1>❤️ Trick Shots For Girls Only ❤️</h1>
             </Link>
 
 
