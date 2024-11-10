@@ -7,8 +7,6 @@ function ForumPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Display Name:', displayName);
-    console.log('Comment:', comment);
 
     // Reset form fields
     setDisplayName('');
@@ -22,7 +20,7 @@ function ForumPage() {
 
   return (
     <div className="center-video">
-      <p>Welcome to the Trick Shot For Girls Only public forum</p>
+      <h2>Welcome to the Trick Shot For Girls Only public forum</h2>
 
       <form name="forum" onSubmit={handleSubmit} className="forum-form" method="POST">
         <input type="hidden" name="form-name" value="forum" />
@@ -42,7 +40,9 @@ function ForumPage() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="comment">What nice things do you have to say about the trick shot?
+          <label htmlFor="comment">
+            What nice things do you have to say about the trick shot?
+
             <textarea
               id="comment"
               name="comment"
@@ -56,7 +56,7 @@ function ForumPage() {
         </div>
 
         <div>
-          <button type="submit">Post Comment</button>
+          <button type="submit">Post to Forum</button>
         </div>
       </form>
 
