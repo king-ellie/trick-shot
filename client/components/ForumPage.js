@@ -5,13 +5,26 @@ function ForumPage() {
   const [comment, setComment] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
 
-    // Reset form fields
+  const handleSubmit = (event) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", "comment": comment, "display-name": displayName})
+    })
+      .then(() => {
+        setIsSubmitted(true);
+      })
+      .catch(error => alert(error));
+
+    event.preventDefault();
     setDisplayName('');
     setComment('');
-    setIsSubmitted(true);
 
     setTimeout(() => {
         setIsSubmitted(false);
@@ -26,7 +39,9 @@ function ForumPage() {
         <input type="hidden" name="form-name" value="forum" />
       
         <div className="form-group">
-          <label htmlFor="display-name">Display Name:
+          <label htmlFor="display-name">
+            Display Name:
+            
             <input
               type="text"
               id="display-name"
