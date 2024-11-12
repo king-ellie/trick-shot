@@ -15,7 +15,7 @@ function ForumPage() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", "comment": comment, "display-name": displayName})
+      body: encode({ "form-name": "forum", "comment": comment, "display-name": displayName})
     })
       .then(() => {
         setIsSubmitted(true);
