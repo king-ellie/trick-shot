@@ -1,3 +1,6 @@
+const webpack = require('webpack');
+require('dotenv').config(); // Load .env variables
+
 module.exports = {
     mode: 'development',
     devtool: 'source-map',
@@ -14,4 +17,12 @@ module.exports = {
         },
       ],
     },
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env.REACT_APP_NETLIFY_API_KEY': JSON.stringify(process.env.REACT_APP_NETLIFY_API_KEY),
+      }),
+      new webpack.DefinePlugin({
+        'process.env.REACT_APP_NETLIFY_SITE_ID': JSON.stringify(process.env.REACT_APP_NETLIFY_SITE_ID),
+      }),
+    ],
   };

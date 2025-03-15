@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import ForumSubmissions from "./ForumSubmissions";
 
 function ForumPage() {
   const [displayName, setDisplayName] = useState('');
@@ -7,28 +8,24 @@ function ForumPage() {
 
   const encode = (data) => {
     return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
   }
 
   const handleSubmit = (event) => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "forum", "comment": comment, "display-name": displayName})
+      body: encode({ "form-name": "forum", "comment": comment, "display-name": displayName }),
     })
-      .then(() => {
-        setIsSubmitted(true);
-      })
-      .catch(error => alert(error));
-
+    .then(() => setIsSubmitted(true))
+    .catch(error => alert(error));
+    
     event.preventDefault();
-    setDisplayName('');
-    setComment('');
+    setDisplayName("");
+    setComment("");
 
-    setTimeout(() => {
-        setIsSubmitted(false);
-    }, 4000);
+    setTimeout(() => setIsSubmitted(false), 4000);
   };
 
   return (
@@ -37,11 +34,11 @@ function ForumPage() {
 
       <form name="forum" onSubmit={handleSubmit} className="forum-form" method="POST">
         <input type="hidden" name="form-name" value="forum" />
-      
+
         <div className="form-group">
           <label htmlFor="display-name">
             Display Name:
-            
+
             <input
               type="text"
               id="display-name"
@@ -81,6 +78,8 @@ function ForumPage() {
           <p>It will appear in the forum shortly.</p>
         </div>
       )}
+
+      <ForumSubmissions/>
     </div>
   );
 }
