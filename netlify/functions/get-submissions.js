@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 export const handler = async () => {
     try {
         const API_KEY = process.env.NETLIFY_API_KEY;
