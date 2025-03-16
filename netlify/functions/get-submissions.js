@@ -1,6 +1,6 @@
 export const handler = async () => {
-    const API_KEY = Netlify.env.get("NETLIFY_API_KEY")
-    const SITE_ID = Netlify.env.get("NETLIFY_SITE_ID")
+    const API_KEY = process.env.get("NETLIFY_API_KEY")
+    const SITE_ID = process.env.get("NETLIFY_SITE_ID")
 
     const response = await fetch(`https://api.netlify.com/api/v1/sites/${SITE_ID}/submissions`, {
         headers: { Authorization: `Bearer ${API_KEY}` },
