@@ -5,7 +5,7 @@ function ForumSubmissions() {
 
   const fetchSubmissions = async () => {
     try {
-        const response = await fetch('/.netlify/functions/getSubmissions');
+        const response = await fetch('/.netlify/functions/get-submissions');
         const data = await response.json();
         
         setSubmissions(data);
