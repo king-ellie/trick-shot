@@ -5,19 +5,14 @@ function ForumSubmissions() {
 
   const fetchSubmissions = async () => {
     try {
-        const NETLIFY_API_KEY = process.env.REACT_APP_NETLIFY_API_KEY;
-        const SITE_ID = process.env.REACT_APP_NETLIFY_SITE_ID
-
-        const response = await fetch(`https://api.netlify.com/api/v1/sites/${SITE_ID}/submissions`, {
-            headers: { Authorization: `Bearer ${NETLIFY_API_KEY}` },
-        });
+        const response = await fetch('/.netlify/functions/getSubmissions');
         const data = await response.json();
         
         setSubmissions(data);
     } catch (error) {
-      console.error('Error fetching submissions:', error);
+        console.error('Error fetching submissions:', error);
     }
-  };
+   };
 
   useEffect(() => {
     fetchSubmissions();
