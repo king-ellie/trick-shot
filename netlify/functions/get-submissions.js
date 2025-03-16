@@ -1,11 +1,11 @@
-import fetch from 'node-fetch';
+import axios from 'axios';
 
 export const handler = async () => {
     try {
         const API_KEY = process.env.NETLIFY_API_KEY;
         const SITE_ID = process.env.NETLIFY_SITE_ID;
         
-        const response = await fetch(`https://api.netlify.com/api/v1/sites/${SITE_ID}/submissions`, {
+        const response = await axios.get(`https://api.netlify.com/api/v1/sites/${SITE_ID}/submissions`, {
             headers: { Authorization: `Bearer ${API_KEY}` },
         });
 
