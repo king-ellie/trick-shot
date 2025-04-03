@@ -7,34 +7,30 @@ import DifferentAnglesPage from './DifferentAnglesPage';
 import PartyModePage from './PartyModePage';
 import Confetti from 'react-confetti'
 import ImmersiveModePage from './ImmersiveMode';
-import ForumPage from './ForumPage';
+import ForumPage from './forum/ForumPage';
 
 
 function App() {
     return (
-        <div className="app-container">
-            <Router>
-                <Link to="/" style={{textDecoration: "none"}}>
-                    <h1>❤️ Trick Shots For Girls Only ❤️</h1>
-                </Link>
+        <Router>
+            <Link to="/" style={{textDecoration: "none"}}>
+                <h1>❤️ Trick Shots For Girls Only ❤️</h1>
+            </Link>
 
+            <NavBar/>
+            
+            <div className="body-container">
                 <Switch>
                     <Route exact path='/'>
-                        <NavBar/>
-
                         <LandingPage/>
                     </Route>
 
                     <Route exact path='/different-angles'>
-                        <NavBar/>
-
                         <DifferentAnglesPage/>
                     </Route>
 
                     <Route exact path='/party-mode'>
                         <Confetti />
-
-                        <NavBar/>
 
                         <PartyModePage/>
                     </Route>
@@ -47,10 +43,11 @@ function App() {
                         <ForumPage/>
                     </Route>
                 </Switch>
-
-                <PageFooter/>
-            </Router>
-        </div>
+            </div>
+            
+            <PageFooter/>
+            
+        </Router>
     )
 }
 

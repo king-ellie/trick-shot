@@ -126,7 +126,7 @@ h1 {
     }
  }
 
- .app-container {
+ .body-container {
     max-width: 800px;
     width: 100%;
     padding: 0 15px;
@@ -334,13 +334,14 @@ h1 {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     height: 60px;
     position: relative;
+
 }
 
 .nav-links {
