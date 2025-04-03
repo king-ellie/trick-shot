@@ -27,7 +27,7 @@ function PartyModePage() {
       { partyModeVideos.map((partyModeVideos, idx) =>
         <video
             key={idx}
-            height="630"
+            height="500"
             type="video/mov"
             src="./trick_shot.MOV"
             autoPlay

@@ -1,13 +1,13 @@
 import React from 'react';
 import videoAngleStyles from '../videoStyles/videoAngleStyles';
-import VideoAngle from './VideoAngle';
+import TrickShotVideo from './TrickShotVideo';
 
 function DifferentAnglesPage() {
   return (
     <div>
-      <h2>Have a look:</h2>
+      <h2>Footage was captured from a number of different angles:</h2>
         {
-          videoAngleStyles.map((angle, idx) => <VideoAngle key={idx} angle={angle}/>) 
+          videoAngleStyles.map((angle, idx) => <TrickShotVideo key={idx} nameOfStyle={angle.className}/>) 
         }
     </div>
   )

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ForumSubmissions from "./ForumSubmissions";
+import TrickShotVideo from "../TrickShotVideo";
 
 function ForumPage() {
   const [displayName, setDisplayName] = useState('');
@@ -29,8 +30,10 @@ function ForumPage() {
   };
 
   return (
-    <div className="center-video">
+    <div>
       <h2 className="forum-title">Welcome to the Trick Shot For Girls Only public forum</h2>
+      
+      <TrickShotVideo nameOfStyle='forum-video' />
 
       <form name="forum" onSubmit={handleSubmit} className="forum-form" method="POST">
         <input type="hidden" name="form-name" value="forum" />

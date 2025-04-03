@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route, Switch, Link} from 'react-router-dom'
-import LandingPage from './LandingPage'
+import TrickShotVideo from './TrickShotVideo'
 import NavBar from './NavBar';
 import PageFooter from './PageFooter';
 import DifferentAnglesPage from './DifferentAnglesPage';
@@ -22,7 +22,7 @@ function App() {
             <div className="body-container">
                 <Switch>
                     <Route exact path='/'>
-                        <LandingPage/>
+                        <TrickShotVideo/>
                     </Route>
 
                     <Route exact path='/different-angles'>

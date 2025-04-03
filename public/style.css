@@ -19,7 +19,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     perspective: 800px;
-    padding: 30px;
+    padding: 10px;
 }
 
 .page-footer{
@@ -48,6 +48,16 @@ h1 {
       to {
         transform: rotate(359deg);
       }
+}
+
+/* IMMERSIVE MODE */
+.immersive-mode-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 /* PARTY MODE STYLES */
@@ -86,15 +96,15 @@ h1 {
 }
 @keyframes inflate {
     0% {
-        transform: scale(1.0);
+        transform: scale(.5);
         -webkit-transform: scale(.5.0);
     }
     50% {
-        transform: scale(2.0);
+        transform: scale(1.0);
         -webkit-transform: scale(2.5);
     }
     100% {
-        transform: scale(1.0);
+        transform: scale(.5);
         -webkit-transform: scale(.5.0);
     }
 }
@@ -135,6 +145,9 @@ h1 {
  }
  
  /* FORM STYLING */
+ .forum-video {
+    top: 0;
+}
 
 .forum-title {
     font-size: 2rem;
