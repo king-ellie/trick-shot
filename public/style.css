@@ -5,7 +5,7 @@ body {
 
 h1 {
     animation: header-color-change 1.5s infinite;
-    font-size: 5em;
+    font-size: 2em;
     text-align: center
 }
 @keyframes header-color-change {
@@ -126,28 +126,91 @@ h1 {
     }
  }
 
+ .app-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 0 auto; 
+ }
+ 
  /* FORM STYLING */
+
+.forum-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .forum-title {
+        font-size: 1.5rem;
+    }
+}
+
 .forum-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
-label {
+.form-label {
+    display: block;
     font-size: 1rem;
-    margin-bottom: 0.5rem; /* Add space between label and input */
-    }
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
 
-input, textarea {
-    padding: 0.5rem;
+.form-input {
+    padding: 0.75rem;
     font-size: 1rem;
     width: 100%;
-    box-sizing: border-box; /* Makes the input take up the full width */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
-  
+
+@media (max-width: 480px) {
+    .form-input {
+        padding: 0.5rem;
+    }
+}
+
+.form-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 480px) {
+    .form-button {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}
+
 .toast {
     position: fixed;
     bottom: 20px;
@@ -160,21 +223,101 @@ input, textarea {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     animation: fadeInOut 4s ease-in-out forwards;
-  }
-  
-  /* Fade-in and fade-out animation */
-  @keyframes fadeInOut {
+    max-width: 90%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Fade-in and fade-out animation */
+@keyframes fadeInOut {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     10% {
-      opacity: 1;
+        opacity: 1;
     }
     90% {
-      opacity: 1;
+        opacity: 1;
     }
     100% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}
+
+/* Forum Submissions Styling */
+.forum-submissions {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.submissions-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.submissions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.submission-item {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submission-name {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.submission-comment {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+.submission-date {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.no-submissions {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .submission-item {
+        padding: 0.75rem;
+    }
+    
+    .submissions-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .submission-name {
+        font-size: 1.1rem;
+    }
+    
+    .submission-comment {
+        font-size: 0.95rem;
+    }
+    
+    .submission-date {
+        font-size: 0.8rem;
+    }
+}
   

@@ -12,44 +12,46 @@ import ForumPage from './ForumPage';
 
 function App() {
     return (
-        <Router>
-            <Link to="/" style={{textDecoration: "none"}}>
-              <h1>❤️ Trick Shots For Girls Only ❤️</h1>
-            </Link>
+        <div className="app-container">
+            <Router>
+                <Link to="/" style={{textDecoration: "none"}}>
+                    <h1>❤️ Trick Shots For Girls Only ❤️</h1>
+                </Link>
 
+                <Switch>
+                    <Route exact path='/'>
+                        <PageLinks/>
 
-            <Switch>
-                <Route exact path='/'>
-                    <PageLinks/>
+                        <LandingPage/>
+                    </Route>
 
-                    <LandingPage/>
-                </Route>
+                    <Route exact path='/different-angles'>
+                        <PageLinks/>
 
-                <Route exact path='/different-angles'>
-                    <PageLinks/>
+                        <DifferentAnglesPage/>
+                    </Route>
 
-                    <DifferentAnglesPage/>
-                </Route>
+                    <Route exact path='/party-mode'>
+                        <Confetti />
 
-                <Route exact path='/party-mode'>
-                    <Confetti />
+                        <PageLinks/>
 
-                    <PageLinks/>
+                        <PartyModePage/>
+                    </Route>
 
-                    <PartyModePage/>
-                </Route>
+                    <Route exact path='/immersive-mode'>
+                        <ImmersiveModePage/>
+                    </Route>
 
-                <Route exact path='/immersive-mode'>
-                    <ImmersiveModePage/>
-                </Route>
+                    <Route exact path='/forum'>
+                        <ForumPage/>
+                    </Route>
+                </Switch>
 
-                <Route exact path='/forum'>
-                    <ForumPage/>
-                </Route>
-            </Switch>
+                <PageFooter/>
+            </Router>
+        </div>
 
-            <PageFooter/>
-        </Router>
     )
 }
 

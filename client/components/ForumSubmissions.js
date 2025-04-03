@@ -19,23 +19,24 @@ function ForumSubmissions() {
   }, []);
 
   return (
-    <div>
-      <h3>Forum Submissions</h3>
+    <div className="forum-submissions">
+      <h3 className="submissions-title">Forum Submissions</h3>
       {submissions.length > 0 ? (
-        <div>
+        <div className="submissions-list">
           {submissions.map((submission) => (
-            <div>
-                <h3 key={submission.id}>
+            <div key={submission.id} className="submission-item">
+                <h3 className="submission-name">
                 {submission.data['display-name']}
                 </h3>
 
-                <p>{submission.data.comment}</p>
-                <p>Submitted at: {new Date(submission.created_at).toLocaleString()}</p>
+                <p className="submission-comment">{submission.data.comment}</p>
+                
+                <p className="submission-date">Submitted at: {new Date(submission.created_at).toLocaleString()}</p>
             </div>
           ))}
         </div>
       ) : (
-        <p>No submissions yet.</p>
+        <p className="no-submissions">No submissions yet.</p>
       )}
     </div>
   );

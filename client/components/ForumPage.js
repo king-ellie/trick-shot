@@ -30,45 +30,47 @@ function ForumPage() {
 
   return (
     <div className="center-video">
-      <h2>Welcome to the Trick Shot For Girls Only public forum</h2>
+      <h2 className="forum-title">Welcome to the Trick Shot For Girls Only public forum</h2>
 
       <form name="forum" onSubmit={handleSubmit} className="forum-form" method="POST">
         <input type="hidden" name="form-name" value="forum" />
 
         <div className="form-group">
-          <label htmlFor="display-name">
+          <label htmlFor="display-name" className="form-label">
             Display Name:
-
-            <input
-              type="text"
-              id="display-name"
-              name="display-name"
-              placeholder="Enter your display name"
-              value={displayName}
-              onChange={(event) => setDisplayName(event.target.value)}
-              required
-            />
           </label>
+
+          <input
+            type="text"
+            id="display-name"
+            name="display-name"
+            placeholder="Enter your display name"
+            value={displayName}
+            onChange={(event) => setDisplayName(event.target.value)}
+            required
+            className="form-input"
+          />
         </div>
 
         <div className="form-group">
-          <label htmlFor="comment">
+          <label htmlFor="comment" className="form-label">
             What nice things do you have to say about the trick shot?
-
-            <textarea
-              id="comment"
-              name="comment"
-              placeholder="Enter your praise"
-              rows="4"
-              value={comment}
-              onChange={(event) => setComment(event.target.value)}
-              required
-            ></textarea>
           </label>
+          
+          <textarea
+            id="comment"
+            name="comment"
+            placeholder="Enter your praise"
+            rows="4"
+            value={comment}
+            onChange={(event) => setComment(event.target.value)}
+            required
+            className="form-input"
+          ></textarea>
         </div>
 
-        <div>
-          <button type="submit">Post to Forum</button>
+        <div className="form-button-container">
+          <button type="submit" className="form-button">Post to Forum</button>
         </div>
       </form>
 
