@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import LandingPage from './LandingPage'
-import PageLinks from './PageLinks';
+import NavBar from './NavBar';
 import PageFooter from './PageFooter';
 import DifferentAnglesPage from './DifferentAnglesPage';
 import PartyModePage from './PartyModePage';
@@ -20,13 +20,13 @@ function App() {
 
                 <Switch>
                     <Route exact path='/'>
-                        <PageLinks/>
+                        <NavBar/>
 
                         <LandingPage/>
                     </Route>
 
                     <Route exact path='/different-angles'>
-                        <PageLinks/>
+                        <NavBar/>
 
                         <DifferentAnglesPage/>
                     </Route>
@@ -34,7 +34,7 @@ function App() {
                     <Route exact path='/party-mode'>
                         <Confetti />
 
-                        <PageLinks/>
+                        <NavBar/>
 
                         <PartyModePage/>
                     </Route>
