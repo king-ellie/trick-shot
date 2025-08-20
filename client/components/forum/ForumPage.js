@@ -35,6 +35,8 @@ function ForumPage() {
       
       <TrickShotVideo nameOfStyle='forum-video' />
 
+      <h3 className="forum-subtitle">Join the Discussion</h3>
+
       <form name="forum" onSubmit={handleSubmit} className="forum-form" method="POST">
         <input type="hidden" name="form-name" value="forum" />
 

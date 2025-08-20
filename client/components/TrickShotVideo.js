@@ -11,11 +11,11 @@ function TrickShotVideo(props) {
                 width="1020"
                 height="630"
                 type="video/mov"
-                src="./trick_shot.MOV"
+                src="./trick_shot.mp4"
                 autoPlay
                 loop
                 muted
-
+                playsInline
             >
                 Your browser does not support the video tag.
             </video>

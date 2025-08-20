@@ -1,6 +1,6 @@
 body {
     background-color: lavender;
-    font-family: "Comic Sans MS", "Comic Sans";
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", sans-serif;
 }
 
 h1 {
@@ -153,6 +153,13 @@ h1 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1.5rem;
+}
+
+.forum-subtitle {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 10px 0;
+    color: #333;
 }
 
 @media (max-width: 768px) {
