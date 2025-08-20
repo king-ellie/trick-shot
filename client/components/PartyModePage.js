@@ -32,6 +32,8 @@ function PartyModePage() {
             src="./trick_shot.mp4"
             autoPlay
             loop
+            playsInline
+            muted
             style={{position: "absolute", left: partyModeVideos.x, top: partyModeVideos.y}}
             className={partyModeVideos.className}
         >
