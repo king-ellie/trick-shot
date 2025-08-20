@@ -20,7 +20,7 @@ function ForumSubmissions() {
 
   return (
     <div className="forum-submissions">
-      <h3 className="submissions-title">Forum Submissions</h3>
+      <h3 className="submissions-title">What people are saying:</h3>
       {submissions.length > 0 ? (
         <div className="submissions-list">
           {submissions.map((submission) => (

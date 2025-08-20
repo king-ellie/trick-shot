@@ -155,6 +155,13 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+.forum-subtitle {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 10px 0;
+    color: #333;
+}
+
 @media (max-width: 768px) {
     .forum-title {
         font-size: 1.5rem;
