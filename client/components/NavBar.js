@@ -8,6 +8,13 @@ function NavBar() {
     setMenuOpen(!menuOpen);
   };
 
+  const navLinks = [
+    { to: '/different-angles/', label: 'See From Different Angles' },
+    { to: '/party-mode/', label: 'Party Mode' },
+    { to: '/immersive-mode/', label: 'Immersive Mode' },
+    { to: '/forum/', label: 'Public Forum' },
+  ];
+
   return (
     <nav className="main-nav">
       <div className="nav-container">
@@ -22,33 +29,24 @@ function NavBar() {
         </button>
 
         <div className={`nav-dropdown ${menuOpen ? 'open' : ''}`}>
-          <Link to="/different-angles/" className="nav-link" onClick={() => setMenuOpen(false)}>
-            See From Different Angles
-          </Link>
-          <Link to="/party-mode/" className="nav-link" onClick={() => setMenuOpen(false)}>
-            Party Mode
-          </Link>
-          <Link to="/immersive-mode/" className="nav-link" onClick={() => setMenuOpen(false)}>
-            Immersive Mode
-          </Link>
-          <Link to="/forum/" className="nav-link" onClick={() => setMenuOpen(false)}>
-            Girls Only Forum
-          </Link>
+          {navLinks.map((link) => (
+            <Link 
+              key={link.to} 
+              to={link.to} 
+              className="nav-link" 
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
 
         <div className="nav-links">
-          <Link to="/different-angles/" className="nav-link">
-            See From Different Angles
-          </Link>
-          <Link to="/party-mode/" className="nav-link">
-            Party Mode
-          </Link>
-          <Link to="/immersive-mode/" className="nav-link">
-            Immersive Mode
-          </Link>
-          <Link to="/forum/" className="nav-link">
-            Public Forum
-          </Link>
+          {navLinks.map((link) => (
+            <Link key={link.to} to={link.to} className="nav-link">
+              {link.label}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
