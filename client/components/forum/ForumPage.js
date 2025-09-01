@@ -38,7 +38,7 @@ function ForumPage() {
 
   return (
     <div>
-      <h2 className="forum-title">Welcome to the Trick Shot For Girls Only public forum</h2>
+      <h2 className="forum-title">Welcome to the Trick Shot For Girls Only Public Forum</h2>
 
       <button onClick={scrollToForm} style={{ display: 'block', margin: '0 auto' }}>Skip to Comments</button>
 
