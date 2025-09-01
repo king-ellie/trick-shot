@@ -6,7 +6,6 @@ import PageFooter from './PageFooter';
 import DifferentAnglesPage from './DifferentAnglesPage';
 import PartyModePage from './PartyModePage';
 import Confetti from 'react-confetti'
-import ImmersiveModePage from './ImmersiveMode';
 import ForumPage from './forum/ForumPage';
 
 
@@ -33,10 +32,6 @@ function App() {
                         <Confetti />
 
                         <PartyModePage/>
-                    </Route>
-
-                    <Route exact path='/immersive-mode'>
-                        <ImmersiveModePage/>
                     </Route>
 
                     <Route exact path='/forum'>

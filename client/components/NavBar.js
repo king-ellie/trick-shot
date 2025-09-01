@@ -11,7 +11,6 @@ function NavBar() {
   const navLinks = [
     { to: '/different-angles/', label: 'See From Different Angles' },
     { to: '/party-mode/', label: 'Party Mode' },
-    { to: '/immersive-mode/', label: 'Immersive Mode' },
     { to: '/forum/', label: 'Public Forum' },
   ];
 
