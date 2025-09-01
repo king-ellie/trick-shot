@@ -1,6 +1,9 @@
+* {
+    font-family: "Comic Sans MS", "Comic Sans", "Calibri", "Chalkboard", sans-serif;
+}
+
 body {
     background-color: lavender;
-    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", sans-serif;
 }
 
 h1 {
@@ -48,16 +51,6 @@ h1 {
       to {
         transform: rotate(359deg);
       }
-}
-
-/* IMMERSIVE MODE */
-.immersive-mode-video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 
 /* PARTY MODE STYLES */

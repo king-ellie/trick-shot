@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ForumSubmissions from "./ForumSubmissions";
 import TrickShotVideo from "../TrickShotVideo";
 
@@ -6,6 +6,7 @@ function ForumPage() {
   const [displayName, setDisplayName] = useState('');
   const [comment, setComment] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const formRef = useRef(null);
 
   const encode = (data) => {
     return Object.keys(data)
@@ -29,13 +30,21 @@ function ForumPage() {
     setTimeout(() => setIsSubmitted(false), 4000);
   };
 
+  const scrollToForm = () => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
-      <h2 className="forum-title">Welcome to the Trick Shot For Girls Only public forum</h2>
-      
+      <h2 className="forum-title">Welcome to the Trick Shot For Girls Only Public Forum</h2>
+
+      <button onClick={scrollToForm} style={{ display: 'block', margin: '0 auto' }}>Skip to Comments</button>
+
       <TrickShotVideo nameOfStyle='forum-video' />
 
-      <h3 className="forum-subtitle">Join the Discussion</h3>
+      <h3 ref={formRef} className="forum-subtitle">Join the Conversation</h3>
 
       <form name="forum" onSubmit={handleSubmit} className="forum-form" method="POST">
         <input type="hidden" name="form-name" value="forum" />
