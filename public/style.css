@@ -1,6 +1,9 @@
+* {
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", sans-serif;
+}
+
 body {
     background-color: lavender;
-    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard", sans-serif;
 }
 
 h1 {
