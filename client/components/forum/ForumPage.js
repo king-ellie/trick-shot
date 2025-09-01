@@ -32,7 +32,14 @@ function ForumPage() {
 
   const scrollToForm = () => {
     if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
+      const navBarOffset = 60;
+      const elementPosition = formRef.current.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - navBarOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
